@@ -506,8 +506,9 @@ export class CommitStatusStore {
       return checkRuns
     }
 
+    const api = API.fromAccount(account)
     return getCheckRunActionsWorkflowRuns(
-      account,
+      api,
       owner,
       name,
       branchName,
